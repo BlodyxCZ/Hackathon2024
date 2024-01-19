@@ -1,7 +1,9 @@
+import 'package:app_admin/globals.dart';
 import 'package:flutter/material.dart';
 import 'routes/view.dart';
 
 void main() {
+  loadData();
   runApp(const MyApp());
 }
 

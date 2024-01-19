@@ -1,4 +1,5 @@
 import 'package:app_admin/routes/group_list.dart';
+import 'package:app_admin/routes/member_viewer.dart';
 import 'package:flutter/material.dart';
 
 class ViewPage extends StatefulWidget {
@@ -40,8 +41,20 @@ class _ViewPageState extends State<ViewPage> {
                       },
               ),
               ListTile(
-                title: const Text("Něco"),
-                onTap: () {},
+                title: const Text("Informace o členech"),
+                leading: const Icon(Icons.insert_chart_outlined_sharp),
+                selected: selectedPage == 1,
+                onTap: selectedPage == 1
+                    ? null
+                    : () {
+                        setState(() {
+                          selectedPage = 1;
+                        });
+                      },
+              ),
+              const Spacer(),
+              Image.asset(
+                "assets/images/logo.png",
               ),
             ],
           ),
@@ -50,6 +63,7 @@ class _ViewPageState extends State<ViewPage> {
               index: selectedPage,
               children: const [
                 GroupListPage(),
+                MemberViewerPage(),
               ],
             ),
           ),
