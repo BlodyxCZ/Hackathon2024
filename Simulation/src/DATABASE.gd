@@ -1,7 +1,6 @@
 extends Node
 
 # YYYY-MM-DD HH:MM:SS.MS
-var time = Time.get_unix_time_from_datetime_string("2020-07-10 15:00:00.000")
 
 @onready var data: Array = [
 	{
@@ -81,6 +80,3 @@ var time = Time.get_unix_time_from_datetime_string("2020-07-10 15:00:00.000")
 		]
 	}
 ]
-
-func _ready():
-	print(time)

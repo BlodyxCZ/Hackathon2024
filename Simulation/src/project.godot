@@ -26,6 +26,10 @@ window/size/borderless=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/graph_2d/plugin.cfg")
+
 [input]
 
 LMB={

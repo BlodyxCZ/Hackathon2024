@@ -1,10 +1,10 @@
 extends HTTPRequest
 
 
-var address: String = "https://"
+var address: String = "https://www.nic.com/post"
 
 
-func _on_request_completed(result, response_code, headers, body) -> void:
+func _on_request_completed(result, response_code, _headers, _body) -> void:
 	print("Result: %s \n Response code: %s" % [result, response_code])
 
 

@@ -20,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 2
 metadata/_edit_lock_ = true
 
 [node name="move_area" type="Button" parent="Panel"]
@@ -140,8 +141,9 @@ offset_right = 864.0
 offset_bottom = 832.0
 theme_override_constants/separation = 0
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
-[node name="SpinBox" type="SpinBox" parent="Panel/date"]
+[node name="day" type="SpinBox" parent="Panel/date"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 min_value = 1.0
@@ -149,7 +151,7 @@ max_value = 31.0
 value = 1.0
 prefix = "DAY:"
 
-[node name="SpinBox2" type="SpinBox" parent="Panel/date"]
+[node name="month" type="SpinBox" parent="Panel/date"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 min_value = 1.0
@@ -157,7 +159,7 @@ max_value = 12.0
 value = 1.0
 prefix = "MONTH:"
 
-[node name="SpinBox3" type="SpinBox" parent="Panel/date"]
+[node name="year" type="SpinBox" parent="Panel/date"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 min_value = 1800.0
@@ -173,20 +175,21 @@ offset_right = 1120.0
 offset_bottom = 832.0
 theme_override_constants/separation = 0
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
-[node name="SpinBox" type="SpinBox" parent="Panel/time"]
+[node name="hours" type="SpinBox" parent="Panel/time"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 max_value = 24.0
 prefix = "HOURS:"
 
-[node name="SpinBox2" type="SpinBox" parent="Panel/time"]
+[node name="minutes" type="SpinBox" parent="Panel/time"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 max_value = 59.0
 prefix = "MINUTES:"
 
-[node name="SpinBox3" type="SpinBox" parent="Panel/time"]
+[node name="seconds" type="SpinBox" parent="Panel/time"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 max_value = 59.0
@@ -199,6 +202,7 @@ script = ExtResource("2_7gd1d")
 [connection signal="pressed" from="Panel/move_area/max" to="." method="_on_max_pressed"]
 [connection signal="pressed" from="Panel/move_area/min" to="." method="_on_min_pressed"]
 [connection signal="pressed" from="Panel/post" to="." method="_on_post_pressed"]
+[connection signal="child_order_changed" from="Panel/sensors/sensors" to="." method="_on_sensors_child_order_changed"]
 [connection signal="item_selected" from="Panel/id_select" to="." method="_on_id_select_item_selected"]
 [connection signal="pressed" from="Panel/add_city" to="." method="_on_add_city_pressed"]
 [connection signal="pressed" from="Panel/add_sensor" to="." method="_on_add_sensor_pressed"]
