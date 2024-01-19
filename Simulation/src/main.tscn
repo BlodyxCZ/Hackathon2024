@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg34haoccnia6"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_qabki"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qabki")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="move_area" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 64.0
+focus_mode = 0
+disabled = true
+
+[node name="close" type="Button" parent="Panel/move_area"]
+layout_mode = 0
+offset_left = 1536.0
+offset_right = 1600.0
+offset_bottom = 64.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "X"
+
+[node name="max" type="Button" parent="Panel/move_area"]
+layout_mode = 0
+offset_left = 1464.0
+offset_right = 1528.0
+offset_bottom = 64.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "□"
+
+[node name="min" type="Button" parent="Panel/move_area"]
+layout_mode = 0
+offset_left = 1392.0
+offset_right = 1456.0
+offset_bottom = 64.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "_"
+
+[connection signal="pressed" from="Panel/move_area/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/move_area/max" to="." method="_on_max_pressed"]
+[connection signal="pressed" from="Panel/move_area/min" to="." method="_on_min_pressed"]
