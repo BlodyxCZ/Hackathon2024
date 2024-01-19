@@ -5,11 +5,11 @@
 # Dokumentace
 ### Tabulka obsahu
 - Obecné informace
-- Jak s aplikací pracovat
+- Návod k použití
 
 ## Obecné informace
-
-## Jak s aplikací pracovat
+Jedná se o prostou spustitelnou aplikaci vytvořenou v enginu Godot pro simulaci dat projektu týmu Northern Wind v soutěži Hackathon 2024
+## Návod k použití
 
 
 
