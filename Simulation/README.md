@@ -18,7 +18,7 @@ Nalevo je seznam senzorů, které budou poslány při zmáčknutí POST. Jednotl
 Selectbox na pravé straně obrazovky vybírá přednastavené hodnoty jednotlivých měst (v rámci testování se při spuštění hodnoty generují náhodně). Při zadání jména nového města a stisknutím tlačítka Add City, budou všechny momentálně zobrazené senzory v seznamu senzorů přidány do nového presetu. Preset nelze jak měnit tak odebrat, automaticky se mažou po restartu aplikace.
 
 ![Screenshot4](https://github.com/BlodyxCZ/Hackathon2024/blob/simulation/Simulation/screenshots/screenshot4.png)<br />
-
+Graf zobrazuje všechny POSTnuté hodnoty od spuštění pro všechny senzory s indexem 0. Hodnota x je nastavena Spinboxem HODINY, zbytek pro gram není relevantní, pouze se zapisuje do databáze při každém POSTu. Hodnota y je momentální hodnota senzoru s indexem 0. Pokud budete chtít přidat více bodů se stejnou hodnotou x, bude předchozí bod přepsán.
 
 
 # Documentation
