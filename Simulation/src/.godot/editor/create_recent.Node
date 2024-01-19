@@ -1,11 +1,12 @@
+FileDialog
+Button
+LineEdit
+SpinBox
+Panel
+HTTPRequest
 Graph2D
 Control
 GraphEdit
 VBoxContainer
-SpinBox
-Button
-LineEdit
 HBoxContainer
 OptionButton
-Panel
-HTTPRequest

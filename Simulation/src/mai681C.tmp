@@ -213,7 +213,7 @@ x_max = 24.0
 x_label = "Hours"
 y_max = 1000.0
 y_label = "Wh"
-background_color = Color(0.133333, 0.133333, 0.133333, 1)
+background_color = Color(0.133333, 0.133333, 0.133333, 0.784314)
 grid_horizontal_visible = true
 grid_vertical_visible = true
 metadata/_edit_lock_ = true
@@ -230,33 +230,29 @@ offset_bottom = 831.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="select_path" type="Button" parent="Panel"]
+[node name="choose_path" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 480.0
 offset_top = 672.0
 offset_right = 576.0
 offset_bottom = 736.0
-text = "SELECT
-"
-metadata/_edit_lock_ = true
+text = "CHOOSE"
 
-[node name="save_path" type="LineEdit" parent="Panel/select_path"]
+[node name="savepath" type="LineEdit" parent="Panel/choose_path"]
 layout_mode = 0
 offset_left = -352.0
 offset_right = -8.0
 offset_bottom = 64.0
 placeholder_text = "Save path"
-editable = false
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 script = ExtResource("2_7gd1d")
 
 [node name="FileDialog" type="FileDialog" parent="."]
-title = "Open a Directory"
+title = "Select save path"
 initial_position = 2
 size = Vector2i(800, 450)
 ok_button_text = "Select"
-file_mode = 2
 access = 2
 
 [connection signal="pressed" from="Panel/move_area/close" to="." method="_on_close_pressed"]
@@ -267,7 +263,5 @@ access = 2
 [connection signal="item_selected" from="Panel/id_select" to="." method="_on_id_select_item_selected"]
 [connection signal="pressed" from="Panel/add_city" to="." method="_on_add_city_pressed"]
 [connection signal="pressed" from="Panel/add_sensor" to="." method="_on_add_sensor_pressed"]
-[connection signal="generation_completed" from="Panel/generator" to="." method="_on_generator_generation_completed"]
-[connection signal="pressed" from="Panel/select_path" to="." method="_on_choose_path_pressed"]
+[connection signal="pressed" from="Panel/choose_path" to="." method="_on_choose_path_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
-[connection signal="dir_selected" from="FileDialog" to="." method="_on_file_dialog_dir_selected"]

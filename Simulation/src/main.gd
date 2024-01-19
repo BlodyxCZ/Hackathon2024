@@ -9,7 +9,10 @@ const SENSOR_ITEM = preload("res://sensor_item.tscn")
 @onready var id_select = $Panel/id_select
 @onready var city_name = $Panel/add_city/city_name
 @onready var sensor_value = $Panel/add_sensor/sensor_value
-@onready var graph = $Graph2D
+@onready var graph = $Panel/Graph2D
+@onready var save_path = $Panel/select_path/save_path
+@onready var file_dialog = $FileDialog
+@onready var generator = $Panel/generator
 
 @onready var day = $Panel/date/day
 @onready var month = $Panel/date/month
@@ -125,3 +128,21 @@ func _on_sensors_child_order_changed():
 	for sensor in sensor_container.get_children():
 		sensor.load_data(i)
 		i += 1
+
+
+func _on_http_request_request_completed(_result, _response_code, _headers, _body):
+	pass # Replace with function body.
+
+
+func _on_generator_generation_completed():
+	var file = FileAccess.open(save_path.text + "/groups.json", FileAccess.WRITE)
+	var data = JSON.stringify(generator.groups)
+	file.store_string(data)
+
+
+func _on_choose_path_pressed():
+	file_dialog.popup()
+
+
+func _on_file_dialog_dir_selected(dir):
+	save_path.text = String(dir)

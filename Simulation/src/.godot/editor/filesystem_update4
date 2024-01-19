@@ -1,2 +1,5 @@
 res://main.tscn
+res://main.gd
+res://generator.gd
 res://sensor_item.tscn
+res://generator.tscn

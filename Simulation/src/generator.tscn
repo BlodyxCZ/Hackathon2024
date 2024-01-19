@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://31ybqi1jchna"]
+
+[ext_resource type="Script" path="res://generator.gd" id="1_u0qh2"]
+[ext_resource type="Script" path="res://HTTPRequest.gd" id="2_0o1dg"]
+
+[node name="generator" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_right = -1408.0
+offset_bottom = -836.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GENERATE GROUPS"
+script = ExtResource("1_u0qh2")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+script = ExtResource("2_0o1dg")
+address = "https://api.namefake.com"
+
+[node name="groups" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = -288.0
+offset_right = -152.0
+offset_bottom = 64.0
+min_value = 1.0
+value = 1.0
+prefix = "GROUPS:"
+
+[node name="members" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = -144.0
+offset_right = -8.0
+offset_bottom = 64.0
+min_value = 1.0
+value = 1.0
+prefix = "MEMBERS:"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
