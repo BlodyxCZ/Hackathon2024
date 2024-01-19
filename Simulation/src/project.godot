@@ -30,6 +30,10 @@ window/stretch/aspect="ignore"
 
 enabled=PackedStringArray("res://addons/graph_2d/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 LMB={

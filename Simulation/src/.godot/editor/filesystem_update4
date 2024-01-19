@@ -1,7 +1,2 @@
 res://main.tscn
-res://main.gd
-res://HTTPRequest.gd
-res://DATABASE.gd
-res://sensor_item.gd
 res://sensor_item.tscn
-res://addons/graph_2d/graph_2d.gd
