@@ -96,13 +96,12 @@ metadata/_edit_lock_ = true
 
 [node name="add_city" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 1216.0
-offset_top = 360.0
-offset_right = 1472.0
-offset_bottom = 424.0
+offset_left = 928.0
+offset_top = 208.0
+offset_right = 1184.0
+offset_bottom = 272.0
 theme_override_font_sizes/font_size = 32
 text = "Add City"
-metadata/_edit_lock_ = true
 
 [node name="city_name" type="LineEdit" parent="Panel/add_city"]
 layout_mode = 0
@@ -132,6 +131,66 @@ offset_bottom = -16.0
 alignment = 1
 prefix = "value ="
 metadata/_edit_lock_ = true
+
+[node name="date" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 640.0
+offset_right = 864.0
+offset_bottom = 832.0
+theme_override_constants/separation = 0
+metadata/_edit_group_ = true
+
+[node name="SpinBox" type="SpinBox" parent="Panel/date"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+min_value = 1.0
+max_value = 31.0
+value = 1.0
+prefix = "DAY:"
+
+[node name="SpinBox2" type="SpinBox" parent="Panel/date"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+min_value = 1.0
+max_value = 12.0
+value = 1.0
+prefix = "MONTH:"
+
+[node name="SpinBox3" type="SpinBox" parent="Panel/date"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+min_value = 1800.0
+max_value = 2024.0
+value = 2000.0
+prefix = "YEAR:"
+
+[node name="time" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 928.0
+offset_top = 640.0
+offset_right = 1120.0
+offset_bottom = 832.0
+theme_override_constants/separation = 0
+metadata/_edit_group_ = true
+
+[node name="SpinBox" type="SpinBox" parent="Panel/time"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+max_value = 24.0
+prefix = "HOURS:"
+
+[node name="SpinBox2" type="SpinBox" parent="Panel/time"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+max_value = 59.0
+prefix = "MINUTES:"
+
+[node name="SpinBox3" type="SpinBox" parent="Panel/time"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+max_value = 59.0
+prefix = "SECONDS:"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 script = ExtResource("2_7gd1d")

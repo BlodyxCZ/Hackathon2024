@@ -8,7 +8,7 @@ const SENSOR_ITEM = preload("res://sensor_item.tscn")
 @onready var sensor_container = $Panel/sensors/sensors
 @onready var id_select = $Panel/id_select
 @onready var city_name = $Panel/add_city/city_name
-@onready var sensor_value = $add_sensor/sensor_value
+@onready var sensor_value = $Panel/add_sensor/sensor_value
 
 @onready var screen_size = DisplayServer.screen_get_size()
 @onready var last_window_size = DisplayServer.window_get_size()
