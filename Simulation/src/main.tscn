@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cg34haoccnia6"]
+[gd_scene load_steps=3 format=3 uid="uid://cg34haoccnia6"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_qabki"]
+[ext_resource type="Script" path="res://HTTPRequest.gd" id="2_7gd1d"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qabki")
+metadata/_edit_lock_ = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -18,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_lock_ = true
 
 [node name="move_area" type="Button" parent="Panel"]
 layout_mode = 0
@@ -25,6 +28,7 @@ offset_right = 1600.0
 offset_bottom = 64.0
 focus_mode = 0
 disabled = true
+metadata/_edit_lock_ = true
 
 [node name="close" type="Button" parent="Panel/move_area"]
 layout_mode = 0
@@ -34,6 +38,7 @@ offset_bottom = 64.0
 focus_mode = 0
 theme_override_font_sizes/font_size = 32
 text = "X"
+metadata/_edit_lock_ = true
 
 [node name="max" type="Button" parent="Panel/move_area"]
 layout_mode = 0
@@ -43,6 +48,7 @@ offset_bottom = 64.0
 focus_mode = 0
 theme_override_font_sizes/font_size = 32
 text = "□"
+metadata/_edit_lock_ = true
 
 [node name="min" type="Button" parent="Panel/move_area"]
 layout_mode = 0
@@ -52,7 +58,44 @@ offset_bottom = 64.0
 focus_mode = 0
 theme_override_font_sizes/font_size = 32
 text = "_"
+metadata/_edit_lock_ = true
+
+[node name="post" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 704.0
+offset_right = 1472.0
+offset_bottom = 832.0
+theme_override_font_sizes/font_size = 64
+text = "POST"
+
+[node name="sensors" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 576.0
+offset_bottom = 832.0
+
+[node name="sensors" type="VBoxContainer" parent="Panel/sensors"]
+layout_mode = 0
+offset_right = 448.0
+offset_bottom = 704.0
+
+[node name="id_select" type="OptionButton" parent="Panel"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 128.0
+offset_right = 1472.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 32
+selected = 0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+script = ExtResource("2_7gd1d")
 
 [connection signal="pressed" from="Panel/move_area/close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Panel/move_area/max" to="." method="_on_max_pressed"]
 [connection signal="pressed" from="Panel/move_area/min" to="." method="_on_min_pressed"]
+[connection signal="pressed" from="Panel/post" to="." method="_on_post_pressed"]
+[connection signal="item_selected" from="Panel/id_select" to="." method="_on_id_select_item_selected"]
+[connection signal="request_completed" from="HTTPRequest" to="HTTPRequest" method="_on_request_completed"]

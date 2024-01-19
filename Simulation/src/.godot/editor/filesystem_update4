@@ -1,2 +1,6 @@
 res://main.tscn
 res://main.gd
+res://HTTPRequest.gd
+res://DATABASE.gd
+res://sensor_item.gd
+res://sensor_item.tscn
