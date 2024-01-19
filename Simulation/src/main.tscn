@@ -68,6 +68,7 @@ metadata/_edit_lock_ = true
 position = Vector2(72, 32)
 scale = Vector2(0.156863, 0.157895)
 texture = ExtResource("2_86kgc")
+metadata/_edit_lock_ = true
 
 [node name="post" type="Button" parent="Panel"]
 layout_mode = 0
@@ -85,11 +86,16 @@ offset_left = 128.0
 offset_top = 128.0
 offset_right = 576.0
 offset_bottom = 640.0
+metadata/_edit_lock_ = true
 
 [node name="sensors" type="VBoxContainer" parent="Panel/sensors"]
-layout_mode = 0
-offset_right = 448.0
-offset_bottom = 512.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
 
 [node name="id_select" type="OptionButton" parent="Panel"]
 layout_mode = 0
@@ -255,7 +261,7 @@ script = ExtResource("2_7gd1d")
 title = "Open a Directory"
 initial_position = 2
 size = Vector2i(800, 450)
-ok_button_text = "Select"
+ok_button_text = "Vybrat stávající složku"
 file_mode = 2
 access = 2
 
