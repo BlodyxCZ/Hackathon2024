@@ -8,7 +8,7 @@
 - Návod k použití
 
 ## Obecné informace
-Jedná se o prostou spustitelnou aplikaci vytvořenou v enginu Godot pro simulaci dat projektu týmu Northern Wind v soutěži [Hackathon 2024](https://hackujstat.cz/).
+Jedná se o prostou spustitelnou aplikaci vytvořenou v Godot Enginu pro simulaci dat projektu týmu Northern Wind v soutěži [Hackathon 2024](https://hackujstat.cz/).
 Aplikace má vlastní GUI k rychlému testování různých dat, poslílaných na daný endpoint.
 ## Návod k použití
 ![Screenshot2](https://github.com/BlodyxCZ/Hackathon2024/blob/simulation/Simulation/screenshots/screenshot2.png)<br />
@@ -27,5 +27,5 @@ Graf zobrazuje všechny POSTnuté hodnoty od spuštění pro všechny senzory s 
 - How to use
 
 ## General information
-
+A easy to use executable app made in Godot Engine to simulate data for Northern Wind's project in [Hackathon 2024](https://hackujstat.cz/) competition.
 ## How to use
