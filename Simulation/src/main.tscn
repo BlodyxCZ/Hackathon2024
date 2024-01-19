@@ -183,7 +183,7 @@ metadata/_edit_group_ = true
 [node name="hours" type="SpinBox" parent="Panel/time"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
-max_value = 24.0
+max_value = 23.0
 prefix = "HOURS:"
 
 [node name="minutes" type="SpinBox" parent="Panel/time"]
@@ -213,6 +213,7 @@ x_label = "Hours"
 y_min = 300.0
 y_max = 1000.0
 y_label = "Wh"
+background_color = Color(0.133333, 0.133333, 0.133333, 1)
 grid_horizontal_visible = true
 grid_vertical_visible = true
 metadata/_edit_lock_ = true

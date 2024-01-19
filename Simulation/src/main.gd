@@ -67,9 +67,12 @@ func _on_min_pressed():
 
 
 func _on_post_pressed():
+	if sensor_container.get_children().is_empty():
+		return
+	
 	var data = get_data()
 	var body = JSON.stringify(data)
-	#http_request.POST(body)
+	http_request.POST(body)
 	
 	for point in plot.points:
 		if point.x == hours.value:
