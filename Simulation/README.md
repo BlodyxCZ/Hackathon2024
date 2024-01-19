@@ -1,6 +1,6 @@
 ## Languages
 - [Čeština](https://github.com/BlodyxCZ/Hackathon2024/blob/simulation/Simulation/README.md#dokumentace)
-- [English](https://github.com/BlodyxCZ/Hackathon2024/blob/simulation/Simulation/README.md#dokumentation)
+- [English](https://github.com/BlodyxCZ/Hackathon2024/blob/simulation/Simulation/README.md#documentation)
 
 # Dokumentace
 ### Tabulka obsahu
