@@ -8,7 +8,7 @@ var sensor_value: int = 0
 
 
 func load_data(id: int = sensor_id, value: int = sensor_value):
-	text.text = "sensor: id = %d, value = %d" % [id, value]
+	text.text = "sensor: id = %d, value = %d Wh" % [id, value]
 	sensor_id = id
 	sensor_value = value
 
