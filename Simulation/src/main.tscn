@@ -68,6 +68,7 @@ offset_right = 1472.0
 offset_bottom = 832.0
 theme_override_font_sizes/font_size = 64
 text = "POST"
+metadata/_edit_lock_ = true
 
 [node name="sensors" type="Panel" parent="Panel"]
 layout_mode = 0
@@ -75,11 +76,13 @@ offset_left = 128.0
 offset_top = 128.0
 offset_right = 576.0
 offset_bottom = 832.0
+metadata/_edit_lock_ = true
 
 [node name="sensors" type="VBoxContainer" parent="Panel/sensors"]
 layout_mode = 0
 offset_right = 448.0
 offset_bottom = 704.0
+metadata/_edit_lock_ = true
 
 [node name="id_select" type="OptionButton" parent="Panel"]
 layout_mode = 0
@@ -89,6 +92,46 @@ offset_right = 1472.0
 offset_bottom = 192.0
 theme_override_font_sizes/font_size = 32
 selected = 0
+metadata/_edit_lock_ = true
+
+[node name="add_city" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 360.0
+offset_right = 1472.0
+offset_bottom = 424.0
+theme_override_font_sizes/font_size = 32
+text = "Add City"
+metadata/_edit_lock_ = true
+
+[node name="city_name" type="LineEdit" parent="Panel/add_city"]
+layout_mode = 0
+offset_top = -80.0
+offset_right = 256.0
+offset_bottom = -16.0
+theme_override_font_sizes/font_size = 32
+placeholder_text = "City name"
+alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="add_sensor" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 208.0
+offset_right = 896.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 32
+text = "Add sensor"
+metadata/_edit_lock_ = true
+
+[node name="sensor_value" type="SpinBox" parent="Panel/add_sensor"]
+layout_mode = 0
+offset_top = -80.0
+offset_right = 256.0
+offset_bottom = -16.0
+alignment = 1
+prefix = "value ="
+metadata/_edit_lock_ = true
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 script = ExtResource("2_7gd1d")
@@ -98,4 +141,6 @@ script = ExtResource("2_7gd1d")
 [connection signal="pressed" from="Panel/move_area/min" to="." method="_on_min_pressed"]
 [connection signal="pressed" from="Panel/post" to="." method="_on_post_pressed"]
 [connection signal="item_selected" from="Panel/id_select" to="." method="_on_id_select_item_selected"]
+[connection signal="pressed" from="Panel/add_city" to="." method="_on_add_city_pressed"]
+[connection signal="pressed" from="Panel/add_sensor" to="." method="_on_add_sensor_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="HTTPRequest" method="_on_request_completed"]

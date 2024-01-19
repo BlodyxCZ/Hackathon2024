@@ -1,6 +1,7 @@
 extends Node
 
 
+var time = "00:00:00" # format = HH:MM:SS
 @onready var data: Array = [
 	{
 		"place_id": 0,

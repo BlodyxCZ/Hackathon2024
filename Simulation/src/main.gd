@@ -7,6 +7,8 @@ const SENSOR_ITEM = preload("res://sensor_item.tscn")
 @onready var http_request = $HTTPRequest
 @onready var sensor_container = $Panel/sensors/sensors
 @onready var id_select = $Panel/id_select
+@onready var city_name = $Panel/add_city/city_name
+@onready var sensor_value = $add_sensor/sensor_value
 
 @onready var screen_size = DisplayServer.screen_get_size()
 @onready var last_window_size = DisplayServer.window_get_size()
@@ -87,3 +89,11 @@ func load_data(index) -> void:
 
 func _on_id_select_item_selected(index):
 	load_data(index)
+
+
+func _on_add_city_pressed():
+	id_select.add_item(city_name.text)
+
+
+func _on_add_sensor_pressed():
+	pass # Replace with function body.

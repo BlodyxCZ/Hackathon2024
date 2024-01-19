@@ -1,6 +1,8 @@
+SpinBox
+LineEdit
+Button
 HBoxContainer
 VBoxContainer
-Button
 OptionButton
 Panel
 HTTPRequest
