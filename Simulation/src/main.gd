@@ -9,17 +9,20 @@ const SENSOR_ITEM = preload("res://sensor_item.tscn")
 @onready var id_select = $Panel/id_select
 @onready var city_name = $Panel/add_city/city_name
 @onready var sensor_value = $Panel/add_sensor/sensor_value
+@onready var graph = $Graph2D
 
-@onready var day = $Panel/date/day.value
-@onready var month = $Panel/date/month.value
-@onready var year = $Panel/date/year.value
-@onready var hours = $Panel/time/hours.value
-@onready var minutes = $Panel/time/minutes.value
-@onready var seconds = $Panel/time/seconds.value
+@onready var day = $Panel/date/day
+@onready var month = $Panel/date/month
+@onready var year = $Panel/date/year
+@onready var hours = $Panel/time/hours
+@onready var minutes = $Panel/time/minutes
+@onready var seconds = $Panel/time/seconds
 
 @onready var screen_size = DisplayServer.screen_get_size()
 @onready var last_window_size = DisplayServer.window_get_size()
 @onready var last_window_position = DisplayServer.window_get_position()
+
+@onready var plot: Graph2D.PlotItem = graph.add_plot_item("sensor_id: 0", Color.GREEN, 1.0)
 
 var contact_point = Vector2.ZERO
 var moving_window = false
@@ -64,27 +67,20 @@ func _on_min_pressed():
 
 
 func _on_post_pressed():
-	var body = get_data_as_string()
-	print(body)
-	http_request.POST(body)
+	var data = get_data()
+	var body = JSON.stringify(data)
+	#http_request.POST(body)
+	
+	for point in plot.points:
+		if point.x == hours.value:
+			plot.remove_point(point)
+	plot.add_point(Vector2(hours.value, data["sensors"][0]["sensor_value"]))
 
 
-func get_data_as_string() -> String:
+func get_data() -> Dictionary:
 	var data = {}
 	data["place_id"] = id_select.selected
-	data["time"] = "%d-%d-%d %d:%d:%d.000" % [year, month, day, hours, minutes, seconds]
-	data["sensors"] = []
-	for sensor in sensor_container.get_children():
-		var sensor_data = {}
-		sensor_data["sensor_id"] = sensor.sensor_id
-		sensor_data["sensor_value"] = sensor.sensor_value
-		data["sensors"].append(sensor_data)
-	return JSON.stringify(data)
-
-
-func get_data_as_dict() -> Dictionary:
-	var data = {}
-	data["place_id"] = id_select.item_count
+	data["time"] = Time.get_unix_time_from_datetime_string("%d-%d-%d %d:%d:%d.000" % [year.value, month.value, day.value, hours.value, minutes.value, seconds.value])
 	data["sensors"] = []
 	for sensor in sensor_container.get_children():
 		var sensor_data = {}
@@ -92,6 +88,7 @@ func get_data_as_dict() -> Dictionary:
 		sensor_data["sensor_value"] = sensor.sensor_value
 		data["sensors"].append(sensor_data)
 	return data
+
 
 func load_data(index) -> void:
 	for child in sensor_container.get_children():
@@ -111,7 +108,7 @@ func _on_id_select_item_selected(index):
 
 func _on_add_city_pressed():
 	id_select.add_item(city_name.text)
-	DB.data.append(get_data_as_dict())
+	DB.data.append(get_data())
 
 
 func _on_add_sensor_pressed():
