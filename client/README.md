@@ -21,5 +21,8 @@ Aplikace klient se dělí na 2 různé aplikace. Jedna pro klienta ve společens
 ![Screenshot1](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot1.png) <br />
 ![Screenshot3](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot3.png) <br />
 ISSE Client Community má analytických údajů z historie spotřeby v daném společenství pro příjemce, a výdej energie pro výdejce.
+![Screenshot2](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot1.png) <br />
+![Screenshot4](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot3.png) <br />
+Příjemce si zde může nastavit od jakého dodavatele bude energii brát a Výdejce nastavit cenu za kterou prodává.
 
  ### Bez společenství
