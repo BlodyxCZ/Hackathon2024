@@ -7,3 +7,10 @@ ISSE je integrovaný systém pro správu a analýzu energetických společenstv�
 - Systém odpovídá požadavkům a specifikacím uvedeným v novele zákona LEX OZE II
 - Analytické informace o efektivitě spotřeby z OZE
 - Schopnost k přístupu k datům přes Open API 
+
+
+### Aplikace v tomto repozitáři
+- ISSE Admin - správa společenstva a sdílejících skupin
+- ISSE Klient pro členy společenství - sledování parametrů svých objektů v rámci společenství
+- ISSE Klient pro samostatné subjekty - sledování parametrů svých objektů nezávisle na spol
+- ISSE Simulátor - generace a simulace datových sad pro ostatní aplikace
