@@ -1,10 +1,10 @@
 # Klientské aplikace
 
 ### Seznam obsahu
-* Admin
-* Klient
-  * Se společenstvím
-  * Bez společenství
+* [Admin](https://github.com/BlodyxCZ/Hackathon2024/tree/main/client#admin)
+* [Klient](https://github.com/BlodyxCZ/Hackathon2024/tree/main/client#klient)
+  * [Se společenstvím](https://github.com/BlodyxCZ/Hackathon2024/tree/main/client#se-spole%C4%8Denstv%C3%ADm)
+  * [Bez společenství](https://github.com/BlodyxCZ/Hackathon2024/tree/main/client#bez-spole%C4%8Denstv%C3%AD)
 
 ## Admin
 ![Screenshot6](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot6.png) <br />
