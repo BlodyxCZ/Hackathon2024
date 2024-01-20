@@ -12,7 +12,7 @@
 Přes aplikaci ISSE Admin získávají administrátoří přístup ke kompletnímu přehledu nad společenstvím a jeho klienty. Hledat můžete nejen skupiny ale i jednotlivé klienty podle jmen. U každého klienta můžete vidět hodnoty: ID, Jméno a příjmení, místo bydliště, EAN číslo a zda se jedná o Spotřebitele či výrobce.
 ![Screenshot8](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot8.png) <br />
 ![Screenshot9](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot9.png) <br />
-
+Pro výber a měření dat v určitém časovém úseku, stačí na stránce Informace o členech vybrat daný úsek, který následně zobrazí na koláčovém grafu.
 ![Screenshot10](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot10.png) <br />
 ![Screenshot11](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot11.png) <br />
 Aplikace ISSE Admin také obsahuje dynamickou mapu elektroměrů klientů po celé české republice. Mapa se automaticky přizpůsobuje po přiblížení a oddálení pro lepší čtení.
@@ -30,3 +30,4 @@ Příjemce si zde může nastavit od jakého dodavatele bude energii brát a Vý
 
  ### Bez společenství
 ![Screenshot12](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot12.png) <br />
+Nezávislí klient v aplikaci ISSE Client Independent uvidí svou spotřebu energie za celý rok a průběžnou cenu energie kterou odebírá.
