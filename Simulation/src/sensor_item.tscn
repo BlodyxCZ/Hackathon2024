@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://djk2u6mrgknq"]
+
+[ext_resource type="Script" path="res://sensor_item.gd" id="1_6haua"]
+
+[node name="sensor_item" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+script = ExtResource("1_6haua")
+
+[node name="text" type="Button" parent="."]
+custom_minimum_size = Vector2(384, 64)
+layout_mode = 2
+focus_mode = 0
+text = "sensor: id = 0, value = 100"
+
+[node name="remove" type="Button" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "X"
+
+[connection signal="pressed" from="remove" to="." method="_on_remove_pressed"]

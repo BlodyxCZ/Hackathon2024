@@ -1,0 +1,267 @@
+[gd_scene load_steps=6 format=3 uid="uid://cg34haoccnia6"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_qabki"]
+[ext_resource type="Script" path="res://HTTPRequest.gd" id="2_7gd1d"]
+[ext_resource type="Texture2D" uid="uid://wxorc8djc01s" path="res://logo.png" id="2_86kgc"]
+[ext_resource type="Script" path="res://addons/graph_2d/graph_2d.gd" id="2_v7qrb"]
+[ext_resource type="PackedScene" uid="uid://31ybqi1jchna" path="res://generator.tscn" id="4_d4a3a"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qabki")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="move_area" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 64.0
+focus_mode = 0
+disabled = true
+metadata/_edit_lock_ = true
+
+[node name="close" type="Button" parent="Panel/move_area"]
+layout_mode = 0
+offset_left = 1536.0
+offset_right = 1600.0
+offset_bottom = 64.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "X"
+metadata/_edit_lock_ = true
+
+[node name="max" type="Button" parent="Panel/move_area"]
+layout_mode = 0
+offset_left = 1464.0
+offset_right = 1528.0
+offset_bottom = 64.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "□"
+metadata/_edit_lock_ = true
+
+[node name="min" type="Button" parent="Panel/move_area"]
+layout_mode = 0
+offset_left = 1392.0
+offset_right = 1456.0
+offset_bottom = 64.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "_"
+metadata/_edit_lock_ = true
+
+[node name="Logo" type="Sprite2D" parent="Panel"]
+position = Vector2(72, 32)
+scale = Vector2(0.156863, 0.157895)
+texture = ExtResource("2_86kgc")
+
+[node name="post" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 704.0
+offset_right = 1472.0
+offset_bottom = 832.0
+theme_override_font_sizes/font_size = 64
+text = "POST"
+metadata/_edit_lock_ = true
+
+[node name="sensors" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 576.0
+offset_bottom = 640.0
+
+[node name="sensors" type="VBoxContainer" parent="Panel/sensors"]
+layout_mode = 0
+offset_right = 448.0
+offset_bottom = 512.0
+
+[node name="id_select" type="OptionButton" parent="Panel"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 128.0
+offset_right = 1472.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 32
+metadata/_edit_lock_ = true
+
+[node name="add_city" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 928.0
+offset_top = 208.0
+offset_right = 1184.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 32
+text = "Add City"
+metadata/_edit_lock_ = true
+
+[node name="city_name" type="LineEdit" parent="Panel/add_city"]
+layout_mode = 0
+offset_top = -80.0
+offset_right = 256.0
+offset_bottom = -16.0
+theme_override_font_sizes/font_size = 32
+placeholder_text = "City name"
+alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="add_sensor" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 208.0
+offset_right = 864.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 32
+text = "Add sensor"
+metadata/_edit_lock_ = true
+
+[node name="sensor_value" type="SpinBox" parent="Panel/add_sensor"]
+layout_mode = 0
+offset_top = -80.0
+offset_right = 272.0
+offset_bottom = -16.0
+max_value = 1e+07
+alignment = 1
+suffix = "Wh"
+metadata/_edit_lock_ = true
+
+[node name="date" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 256.0
+offset_right = 1488.0
+offset_bottom = 448.0
+theme_override_constants/separation = 0
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="day" type="SpinBox" parent="Panel/date"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+min_value = 1.0
+max_value = 31.0
+value = 1.0
+prefix = "DAY:"
+
+[node name="month" type="SpinBox" parent="Panel/date"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+min_value = 1.0
+max_value = 12.0
+value = 1.0
+prefix = "MONTH:"
+
+[node name="year" type="SpinBox" parent="Panel/date"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+min_value = 1800.0
+max_value = 2024.0
+value = 2000.0
+prefix = "YEAR:"
+
+[node name="time" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 480.0
+offset_right = 1488.0
+offset_bottom = 672.0
+theme_override_constants/separation = 0
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="hours" type="SpinBox" parent="Panel/time"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+max_value = 23.0
+prefix = "HOURS:"
+
+[node name="minutes" type="SpinBox" parent="Panel/time"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+max_value = 59.0
+prefix = "MINUTES:"
+
+[node name="seconds" type="SpinBox" parent="Panel/time"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+max_value = 59.0
+prefix = "SECONDS:"
+
+[node name="Graph2D" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_left = 608.0
+offset_top = 304.0
+offset_right = 1184.0
+offset_bottom = 832.0
+script = ExtResource("2_v7qrb")
+x_max = 24.0
+x_label = "Hours"
+y_max = 1000.0
+y_label = "Wh"
+background_color = Color(0.133333, 0.133333, 0.133333, 0.784314)
+grid_horizontal_visible = true
+grid_vertical_visible = true
+metadata/_edit_lock_ = true
+
+[node name="generator" parent="Panel" instance=ExtResource("4_d4a3a")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 416.0
+offset_top = 768.0
+offset_right = 576.0
+offset_bottom = 831.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="choose_path" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 672.0
+offset_right = 576.0
+offset_bottom = 736.0
+text = "CHOOSE"
+
+[node name="savepath" type="LineEdit" parent="Panel/choose_path"]
+layout_mode = 0
+offset_left = -352.0
+offset_right = -8.0
+offset_bottom = 64.0
+placeholder_text = "Save path"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+script = ExtResource("2_7gd1d")
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Select save path"
+initial_position = 2
+size = Vector2i(800, 450)
+ok_button_text = "Select"
+access = 2
+
+[connection signal="pressed" from="Panel/move_area/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/move_area/max" to="." method="_on_max_pressed"]
+[connection signal="pressed" from="Panel/move_area/min" to="." method="_on_min_pressed"]
+[connection signal="pressed" from="Panel/post" to="." method="_on_post_pressed"]
+[connection signal="child_order_changed" from="Panel/sensors/sensors" to="." method="_on_sensors_child_order_changed"]
+[connection signal="item_selected" from="Panel/id_select" to="." method="_on_id_select_item_selected"]
+[connection signal="pressed" from="Panel/add_city" to="." method="_on_add_city_pressed"]
+[connection signal="pressed" from="Panel/add_sensor" to="." method="_on_add_sensor_pressed"]
+[connection signal="pressed" from="Panel/choose_path" to="." method="_on_choose_path_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
