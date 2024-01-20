@@ -53,31 +53,47 @@ class _SettingsPageState extends State<SettingsPage> {
                       ),
                       Align(
                         alignment: Alignment.center,
-                        child: DropdownButton(
-                          value: selectedValue,
-                          items: const [
-                            DropdownMenuItem(
-                              child: Text("Automaticky"),
-                              value: "aut",
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            DropdownButton(
+                              value: selectedValue,
+                              items: const [
+                                DropdownMenuItem(
+                                  child: Text("Automaticky"),
+                                  value: "aut",
+                                ),
+                                DropdownMenuItem(
+                                  child: Text("ČEZ"),
+                                  value: "cez",
+                                ),
+                                DropdownMenuItem(
+                                  child: Text("Dodavatel 1"),
+                                  value: "dodavatel1",
+                                ),
+                                DropdownMenuItem(
+                                  child: Text("Dodavatel 2"),
+                                  value: "dodavatel2",
+                                ),
+                              ],
+                              onChanged: (object) {
+                                setState(() {
+                                  selectedValue = object.toString();
+                                });
+                              },
                             ),
-                            DropdownMenuItem(
-                              child: Text("ČEZ"),
-                              value: "cez",
-                            ),
-                            DropdownMenuItem(
-                              child: Text("Dodavatel 1"),
-                              value: "dodavatel1",
-                            ),
-                            DropdownMenuItem(
-                              child: Text("Dodavatel 2"),
-                              value: "dodavatel2",
+                            const SizedBox(height: 10),
+                            Text(
+                              {
+                                "aut": "Dodavatel 2 - 1,6 Kč/kWh",
+                                "cez": "2,35 Kč/kWh",
+                                "dodavatel1": "1,4 Kč/kWh",
+                                "dodavatel2": "1,6 Kč/kWh",
+                              }[selectedValue]!,
+                              style: const TextStyle(fontSize: 20),
                             ),
                           ],
-                          onChanged: (object) {
-                            setState(() {
-                              selectedValue = object.toString();
-                            });
-                          },
                         ),
                       ),
                     ],

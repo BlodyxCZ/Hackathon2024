@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'routes/view.dart';
+import 'routes/view2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,11 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
         brightness: Brightness.dark,
       ),
-      home: const ViewPage(),
+      initialRoute: "/view",
+      routes: {
+        "/view": (context) => const ViewPage(),
+        "/view2": (context) => const ViewPage2(),
+      },
     );
   }
 }
