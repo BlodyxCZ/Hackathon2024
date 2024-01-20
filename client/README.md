@@ -19,5 +19,7 @@ Aplikace klient se dělí na 2 různé aplikace. Jedna pro klienta ve společens
 
 ### Se společenstvím
 ![Screenshot1](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot1.png) <br />
+![Screenshot3](https://github.com/BlodyxCZ/Hackathon2024/blob/main/client/screenshots/screenshot3.png) <br />
+ISSE Client Community má analytických údajů z historie spotřeby v daném společenství pro příjemce, a výdej energie pro výdejce.
 
  ### Bez společenství
