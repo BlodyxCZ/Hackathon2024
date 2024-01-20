@@ -10,7 +10,7 @@ ISSE je integrovaný systém pro správu a analýzu energetických společenstv�
 
 
 ### Aplikace v tomto repozitáři
-- ISSE Admin - správa společenstva a sdílejících skupin
-- ISSE Klient pro členy společenství - sledování parametrů svých objektů v rámci společenství
-- ISSE Klient pro samostatné subjekty - sledování parametrů svých objektů nezávisle na spol
-- ISSE Simulátor - generace a simulace datových sad pro ostatní aplikace
+- [ISSE Admin](https://github.com/BlodyxCZ/Hackathon2024/tree/main/client/app_admin/build/windows/x64/runner/Release) - správa společenstva a sdílejících skupin
+- [ISSE Klient pro členy společenství](https://github.com/BlodyxCZ/Hackathon2024/tree/main/client/app_client_community/build/windows/x64/runner/Release) - sledování parametrů svých objektů v rámci společenství
+- [ISSE Klient pro samostatné subjekty](https://github.com/BlodyxCZ/Hackathon2024/tree/main/client/app_client_independent/build/windows/x64/runner/Release) - sledování parametrů svých objektů nezávisle na spol
+- [ISSE Simulátor](https://github.com/BlodyxCZ/Hackathon2024/tree/main/Simulation) - generace a simulace datových sad pro ostatní aplikace
