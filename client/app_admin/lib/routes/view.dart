@@ -1,4 +1,5 @@
 import 'package:app_admin/routes/group_list.dart';
+import 'package:app_admin/routes/map.dart';
 import 'package:app_admin/routes/member_viewer.dart';
 import 'package:flutter/material.dart';
 
@@ -52,9 +53,17 @@ class _ViewPageState extends State<ViewPage> {
                         });
                       },
               ),
-              const Spacer(),
-              Image.asset(
-                "assets/images/logo.png",
+              ListTile(
+                title: const Text("Mapa elektroměrů"),
+                leading: const Icon(Icons.map),
+                selected: selectedPage == 2,
+                onTap: selectedPage == 2
+                    ? null
+                    : () {
+                        setState(() {
+                          selectedPage = 2;
+                        });
+                      },
               ),
             ],
           ),
@@ -64,6 +73,7 @@ class _ViewPageState extends State<ViewPage> {
               children: const [
                 GroupListPage(),
                 MemberViewerPage(),
+                MapPage(),
               ],
             ),
           ),
