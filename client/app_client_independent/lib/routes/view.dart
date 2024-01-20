@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:app_client_independent/routes/history.dart';
 
 class ViewPage extends StatefulWidget {
   const ViewPage({super.key});
@@ -14,20 +15,9 @@ class _ViewPageState extends State<ViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
+        title: const Row(
           children: [
-            Icon(Icons.home),
-            SizedBox(width: 8),
-            Text("Společenství Liberec - Skupina 1 - Příjemce"),
-            const SizedBox(
-              width: 16,
-            ),
-            OutlinedButton(
-              onPressed: () {
-                Navigator.pushReplacementNamed(context, "/view2");
-              },
-              child: Text("Přepnout na Výdejce"),
-            ),
+            Text("Samostatně činný subjekt"),
           ],
         ),
       ),
@@ -36,8 +26,8 @@ class _ViewPageState extends State<ViewPage> {
           NavigationDrawer(
             children: [
               ListTile(
-                title: const Text("Historie spotřeby"),
-                leading: const Icon(Icons.history),
+                title: const Text("Spotřeba energie"),
+                leading: const Icon(Icons.electric_bolt_rounded),
                 selected: selectedPage == 0,
                 onTap: selectedPage == 0
                     ? null
@@ -47,25 +37,13 @@ class _ViewPageState extends State<ViewPage> {
                         });
                       },
               ),
-              ListTile(
-                title: const Text("Nastavení spotřeby"),
-                leading: const Icon(Icons.settings),
-                selected: selectedPage == 1,
-                onTap: selectedPage == 1
-                    ? null
-                    : () {
-                        setState(() {
-                          selectedPage = 1;
-                        });
-                      },
-              ),
             ],
           ),
           Expanded(
             child: IndexedStack(
               index: selectedPage,
               children: const [
-                Placeholder(),
+                ConsumptionHistoryPage(),
               ],
             ),
           ),

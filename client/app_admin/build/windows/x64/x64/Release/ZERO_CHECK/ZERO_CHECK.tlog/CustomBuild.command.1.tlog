@@ -1,0 +1,10 @@
+^C:\USERS\DAVID\DESKTOP\HACKATHON2024\CLIENT\APP_ADMIN\BUILD\WINDOWS\X64\CMAKEFILES\32FB7C0B8FC74D7C2000957552F5A28D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/david/Desktop/Hackathon2024/client/app_admin/windows -BC:/Users/david/Desktop/Hackathon2024/client/app_admin/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/david/Desktop/Hackathon2024/client/app_admin/build/windows/x64/app_admin.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
