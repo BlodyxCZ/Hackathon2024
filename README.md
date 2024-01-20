@@ -4,8 +4,12 @@ ISSE je integrovaný systém pro správu a analýzu energetických společenstv�
 
 ### Seznam obsahu
 - [Tým](https://github.com/BlodyxCZ/Hackathon2024#t%C3%BDm)
+- Hackathon
 - [Vlastnosti](https://github.com/BlodyxCZ/Hackathon2024#kl%C3%AD%C4%8Dov%C3%A9-vlastnosti-isse)
 - [ISSE Aplikace](https://github.com/BlodyxCZ/Hackathon2024#aplikace-v-tomto-repozit%C3%A1%C5%99i)
+
+### Soutěž
+[Hackathon 2024](https://hackujstat.cz/)
 
 ### Tým
 - [Lukáš Moravec](https://github.com/Lukasl32)
