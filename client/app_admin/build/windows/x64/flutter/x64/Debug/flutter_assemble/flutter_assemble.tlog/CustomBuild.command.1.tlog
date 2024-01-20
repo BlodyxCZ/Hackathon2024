@@ -1,0 +1,28 @@
+^C:\USERS\DAVID\DESKTOP\HACKATHON2024\CLIENT\APP_ADMIN\BUILD\WINDOWS\X64\CMAKEFILES\BAA0C20F015CF2E29C47AA953BB16755\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=C:\Users\david\Desktop\Hackathon2024\client\app_admin FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\david\Desktop\Hackathon2024\client\app_admin\windows\flutter\ephemeral PROJECT_DIR=C:\Users\david\Desktop\Hackathon2024\client\app_admin FLUTTER_TARGET=C:\Users\david\Desktop\Hackathon2024\client\app_admin\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC82ZTJlYTU4YTVjY2JlZmNmYWRjMmQ0YjdiODA0NWZjNmMyMGFiODEyLw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\david\Desktop\Hackathon2024\client\app_admin\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DAVID\DESKTOP\HACKATHON2024\CLIENT\APP_ADMIN\BUILD\WINDOWS\X64\CMAKEFILES\613370BD4E4876CC852FD8E43239658A\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DAVID\DESKTOP\HACKATHON2024\CLIENT\APP_ADMIN\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/david/Desktop/Hackathon2024/client/app_admin/windows -BC:/Users/david/Desktop/Hackathon2024/client/app_admin/build/windows/x64 --check-stamp-file C:/Users/david/Desktop/Hackathon2024/client/app_admin/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

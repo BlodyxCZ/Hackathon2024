@@ -1,0 +1,28 @@
+^C:\USERS\DAVID\DESKTOP\HACKATHON2024\CLIENT\APP_CLIENT_INDEPENDENT\BUILD\WINDOWS\X64\CMAKEFILES\1D20D8E2AFF016D1552B622F02621300\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=C:\Users\david\Desktop\Hackathon2024\client\app_client_independent FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\david\Desktop\Hackathon2024\client\app_client_independent\windows\flutter\ephemeral PROJECT_DIR=C:\Users\david\Desktop\Hackathon2024\client\app_client_independent FLUTTER_TARGET=lib\main.dart DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=true PACKAGE_CONFIG=C:\Users\david\Desktop\Hackathon2024\client\app_client_independent\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DAVID\DESKTOP\HACKATHON2024\CLIENT\APP_CLIENT_INDEPENDENT\BUILD\WINDOWS\X64\CMAKEFILES\8000F411ADC6C982C33B53295F6AD7AA\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DAVID\DESKTOP\HACKATHON2024\CLIENT\APP_CLIENT_INDEPENDENT\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/david/Desktop/Hackathon2024/client/app_client_independent/windows -BC:/Users/david/Desktop/Hackathon2024/client/app_client_independent/build/windows/x64 --check-stamp-file C:/Users/david/Desktop/Hackathon2024/client/app_client_independent/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

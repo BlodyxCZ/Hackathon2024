@@ -1,0 +1,10 @@
+^C:\USERS\DAVID\DESKTOP\HACKATHON2024\CLIENT\APP_CLIENT_COMMUNITY\BUILD\WINDOWS\X64\CMAKEFILES\2CAE71D1B796BAA04C1D349B1ECC7A6F\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
