@@ -3,9 +3,9 @@
 ISSE je integrovaný systém pro správu a analýzu energetických společenství. Hlavním úkolem ISSE je udržování přehledu nad přenosy energie mezi jednotlivými subjekty v rámci daného společenství a zaznamenávat nejen výkonovou, ale také finanční složku daných přenosů.
 
 ### Seznam obsahu
-- Tým
-- [Vlastnosti](https://github.com/BlodyxCZ/Hackathon2024/tree/main#kl%C3%AD%C4%8Dov%C3%A9-vlastnosti-isse)
-- [ISSE Aplikace](https://github.com/BlodyxCZ/Hackathon2024/tree/main#aplikace-v-tomto-repozit%C3%A1%C5%99i)
+- [Tým](https://github.com/BlodyxCZ/Hackathon2024#t%C3%BDm)
+- [Vlastnosti](https://github.com/BlodyxCZ/Hackathon2024#kl%C3%AD%C4%8Dov%C3%A9-vlastnosti-isse)
+- [ISSE Aplikace](https://github.com/BlodyxCZ/Hackathon2024#aplikace-v-tomto-repozit%C3%A1%C5%99i)
 
 ### Tým
 - [Lukáš Moravec](https://github.com/Lukasl32)
